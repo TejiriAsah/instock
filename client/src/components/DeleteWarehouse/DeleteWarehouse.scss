@@ -1,0 +1,79 @@
+@import '../../partials/mixins';
+@import '../../partials/constants';
+
+.delete-warehouse {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &__btn {
+    margin-left: 0.5rem;
+    background-color: $red;
+    text-align: center;
+    padding: 0rem;
+    width: 8.68rem;
+    @include tablet {
+      width: 3.81rem;
+    }
+  }
+  &__heading {
+    margin-left: 1rem;
+    font-size: 1.75rem;
+    @include tablet {
+      margin-left: 4rem;
+      margin-right: 12.56rem;
+    }
+  }
+  &__message {
+    margin: 0 1rem;
+    margin-bottom: 27.56rem;
+    @include tablet {
+      margin-left: 4rem;
+      margin-right: 4rem;
+      margin-bottom: 0rem;
+    }
+  }
+  &__options {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+      margin-left: 31.38rem;
+      margin-right: 2rem;
+      margin-bottom: 0rem;
+    }
+  }
+  @include tablet {
+    position: absolute;
+    width: 42rem;
+    height: 16.375rem;
+    margin: 11.56rem 3rem 36.06rem 3rem;
+    // background-color: #13182c;
+    opacity: 1;
+  }
+  @include desktop {
+    margin: 11.56rem 19rem 29.88rem 19rem;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+  }
+}
+.close-page {
+  margin: 1.3125rem 1.3125rem 0rem 20rem;
+  @include tablet {
+    margin-left: 39.8125rem;
+  }
+}
+.test {
+  @include tablet {
+    background-color: #13182c;
+    opacity: 0.7;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

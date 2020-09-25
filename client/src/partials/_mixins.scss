@@ -1,0 +1,66 @@
+@import './constants';
+
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex(
+  $jc: flex-start,
+  $ai: stretch,
+  $bx: content-box,
+  $fd: row,
+  $fw: nowrap
+) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  box-sizing: $bx;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+@mixin font($fs: 1rem, $lh: 1rem, $fw: 400, $color: $instock-black) {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin placement($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin mobileL {
+  @media screen and (min-width: $mobileL-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin button-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: $light-grey;
+}

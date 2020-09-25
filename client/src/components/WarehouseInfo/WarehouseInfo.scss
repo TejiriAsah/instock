@@ -1,0 +1,77 @@
+@import '../../partials/constants';
+@import '../../partials/mixins';
+
+.info {
+  @include flex($bx: border-box, $fw: wrap);
+  width: 100%;
+  height: 10.5rem;
+  padding: 1rem 1.5rem;
+  background-color:$white;
+
+  @include tablet {
+    @include flex($bx: border-box);
+    height: 7.125rem;
+    padding: 1.5rem 2rem;
+  }
+
+  @include desktop {
+    padding: 1.5rem 2.5rem;
+  }
+
+  &__label {
+    @include font(0.6875rem, 1rem, 600, $slate);
+    text-transform: uppercase;
+    width: 50%;
+    margin-top: 1rem;
+
+    @include tablet {
+      @include font(0.75rem, 1.125rem, 600, $slate);
+      margin: 0 1.5rem 0 0;
+      width: 8.875rem;
+    }
+
+    @include desktop {
+      width: 13.5625rem;
+      margin: 0 1.75rem 0 0;
+    }
+
+    &--address {
+      margin: 0;
+      width: 100%;
+
+      @include tablet {
+        flex-grow: 1;
+        width: 15.375rem;
+        padding-right: 2rem;
+        border-right: 1px solid $cloud;
+      }
+
+      @include desktop {
+        padding-right: 9.75rem;
+      }
+    }
+  }
+
+  &__text {
+    @include font(0.8125rem, 1.25rem, 400);
+    text-transform: none;
+    width: 100%;
+    margin: 0;
+
+    @include tablet {
+      @include font(0.875rem, 1.375rem, 400);
+    }
+  }
+
+  &__contact {
+    @include flex($jc: space-between);
+    width: 100%;
+
+    @include tablet {
+      @include flex($bx: border-box);
+      flex-grow: 1;
+      width: 336px;
+      padding-left: 2.5rem;
+    }
+  }
+}

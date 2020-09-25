@@ -1,0 +1,16 @@
+@import '../../partials/mixins';
+@import '../../partials/constants';
+
+.cancelBtn {
+  width: 8.68rem;
+  height: 2.25rem;
+  border-radius: 1.25rem;
+  margin-top: 1rem;
+  background-color: $white;
+  border: 1px solid $cloud;
+  color: $slate;
+  @include tablet {
+    width: 3.81rem;
+    height: 2.4rem;
+  }
+}

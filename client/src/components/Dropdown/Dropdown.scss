@@ -1,0 +1,45 @@
+@import '../../partials/constants';
+@import '../../partials/mixins';
+
+.dropdown {
+  @include flex($ai: center, $fw: wrap);
+  @include font(0.8125rem, 1.25rem, 600);
+  width: 100%;
+  margin-bottom: 1rem;
+
+
+  @include tablet {
+    @include font(0.875rem, 1.375rem, 600);
+  }
+
+  &__input {
+    height: 2.25rem;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0 1rem;
+    border: 1px solid #BDC5D5;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: url('../../assets/icons/arrow_drop_down-24px.svg') no-repeat right;
+    background-color: $white;
+    appearance: none;
+  
+    &:focus {
+      outline: none;
+      border: 1px solid $instock-indigo;
+    }
+  }
+
+  & :first-child {
+    @include font(13px, 20px, 400, $slate);
+
+    @include tablet {
+      @include font(0.875rem, 1.375rem, 400, $slate);
+    }
+  }
+
+  &--error {
+    outline: none;
+    border: 1px solid $red;
+  }
+}

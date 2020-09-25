@@ -1,0 +1,29 @@
+@import '../../partials/constants';
+@import '../../partials/mixins';
+
+.copyright {
+  @include flex($ai: center, $jc: center);
+  width: 100%;
+  height: 6rem;
+  background-color: $light-grey;
+
+  @include tablet {
+    height: 8rem;
+  }
+
+  @include tablet {
+    height: 10.0625rem;
+  }
+
+  &__text {
+    @include font(0.6875rem, 1rem, 400, $slate);
+
+    @include tablet {
+      @include font(0.75rem, 1.125rem, 400, $slate);
+    }
+
+    @include desktop {
+      margin-top: 5.9375rem;
+    }
+  }
+}

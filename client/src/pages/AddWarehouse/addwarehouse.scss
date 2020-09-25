@@ -1,0 +1,95 @@
+@import '../../partials/mixins';
+@import '../../partials/constants';
+
+.add-warehouse {
+  &__container {
+    align-items: center;
+    width: 21.5rem;
+    box-sizing: border-box;
+    margin-top: 8rem;
+    background-color: $white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    @include tablet {
+      width: 44rem;
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+    @include desktop {
+      width: 63.75rem;
+      margin: 5.7rem 8.125rem 13.81rem;
+    }
+  }
+  &__nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $cloud;
+  }
+  &__header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
+
+    @include tablet {
+      font-size: 2rem;
+      margin: 0;
+      padding: 2rem 5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  &__info {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 1.5rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+  &__details {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    @include tablet {
+      border-top: none;
+    }
+  }
+  &__wdiv {
+    @include tablet {
+      border-right: 1px solid $cloud;
+    }
+  }
+  &__details--tablet {
+    @include mobile {
+      border-top: 1px solid $cloud;
+      padding-top: 1rem;
+    }
+    @include tablet {
+      border-top: none;
+    }
+  }
+}
+
+.add__btn {
+  @include button-style;
+  @include tablet {
+    padding-bottom: 1rem;
+    justify-content: flex-end;
+  }
+}
+
+.centerPage {
+  display: flex;
+  justify-content: center;
+}
+.goBackBtn {
+  padding-left: 1rem;
+  margin-top: 2.5rem;
+}
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}

@@ -1,0 +1,126 @@
+@import '../../partials/mixins';
+@import '../../partials/constants';
+
+.edit-inventory {
+  &__container {
+    margin-top: 8rem;
+    background-color: $white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 21.5rem;
+    @include tablet {
+      width: 44rem;
+      margin-right: 2rem;
+      margin-left: 2rem;
+    }
+    @include desktop {
+      margin-left: 8.125rem;
+      margin-right: 8.125rem;
+      margin-bottom: 13.81rem;
+      margin-top: 5.7rem;
+      width: 63.75rem;
+    }
+  }
+  &__nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $cloud;
+  }
+  &__header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
+
+    @include tablet {
+      font-size: 2rem;
+      margin: 0;
+      padding: 2rem 5rem;
+      padding-left: 0.5rem;
+    }
+  }
+  &__info {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      justify-content: space-evenly;
+      margin-top: 1.5rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+  &__details {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    @include tablet {
+      border-top: none;
+    }
+  }
+
+  // &__details--tablet {
+  //   @include mobile {
+  //     border-top: 1px solid $cloud;
+  //     padding-top: 1rem;
+  //   }
+  //   @include tablet {
+  //     border-top: none;
+  //     padding-top: 0rem;
+  //   }
+  // }
+  &__divider {
+    @include tablet {
+      border-right: 1px solid $cloud;
+    }
+  }
+}
+
+.input__field--desc {
+  width: 295px;
+  height: 120px;
+  font-family: $font;
+  margin: 0 1.5rem;
+  padding: 0 1rem;
+  border: 1px solid $cloud;
+  border-radius: 20px;
+  box-sizing: border-box;
+  @include tablet {
+    box-sizing: border-box;
+  }
+  @include desktop {
+    width: 26.8125rem;
+  }
+}
+.custom-select {
+  width: 18.43rem;
+  height: 2.25rem;
+  border-radius: 20px;
+  border: 1px solid $cloud;
+  margin: 0 1.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  @include tablet {
+  }
+  @include desktop {
+    width: 26.8125rem;
+  }
+}
+
+.input__btn {
+  font-weight: 600;
+  font-size: 0.813rem;
+  color: $instock-black;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 4rem;
+}
+
+.input__selection {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

@@ -1,0 +1,143 @@
+@import '../../partials/constants';
+@import '../../partials/mixins';
+
+
+.warehouses {
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+  background: $white;
+
+  &__top {
+    @include flex($fw: wrap, $bx: border-box);
+    height: 12.25rem;
+    width: 100%;
+    padding: 2rem 1.5rem 0 1.5rem;
+    border-bottom: 1px solid $cloud;
+
+    @include tablet {
+      border: none;
+      height: 5.875rem;
+      padding: 2rem 2rem 1.5rem 2rem;
+    }
+
+    @include desktop {
+      padding: 2rem 2.5rem 1.5rem 2.5rem;
+    }
+  }
+
+  &__title {
+    @include font(1.75rem, 2.25rem, 600, $instock-black);
+    margin: 0 0 1rem 0;
+
+    @include tablet {
+      @include font(2rem, 2.5rem, 600, $instock-black);
+    }
+  }
+
+  &__search-container {
+    @include flex($ai: center, $jc: flex-end);
+    position: relative;
+    width: 100%;
+
+    @include tablet {
+      height: 2.375rem;
+      width: 11.5625rem;
+      flex-grow: 1;
+      padding: 0 1rem 0 6.25rem;
+    }
+
+    @include desktop {
+      width: 17.125rem;
+      padding: 0 1rem 0 19.4375rem;
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    padding: 0 0.5944rem 0 0;
+  }
+
+  &__search-input {
+    @include font(0.8125rem, 1.25rem, $color: $instock-black);
+    width: 100%;
+    border: 1px solid #BDC5D5;
+    border-radius: 1.25rem;
+    box-sizing: border-box;
+    height: 2.25rem;
+    padding: .5rem 1rem;
+
+    &::placeholder {
+      color: $slate;
+    }
+  }
+
+  &__sort {
+    background: rgba(247, 248, 249, 0.7);
+    height: 2.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    display: none;
+
+    @include tablet {
+      @include flex($ai: center, $jc: space-between, $bx: border-box);
+      padding: 0 2rem;
+    }
+
+    @include desktop {
+      padding: 0 2.5rem;
+    }
+  }
+
+  &__sort-label {
+    @include flex($ai: center);
+    @include font(0.75rem, 1.125rem, 600, $slate);
+    height: 100%;
+    width: 20%;
+    text-transform: uppercase;
+
+    & img:first-child {
+      height: 1.125rem;
+    }
+
+    &--warehouse {
+      width: 8rem;
+    }
+
+    &--address {
+      width: 5.9375rem;
+
+      @include desktop {
+        width: 13.5rem;
+      }
+    }
+
+    &--contact {
+      @include tablet {
+        width: 8rem;
+      }
+    }
+
+    &--contact-info {
+      width: 10.9375rem;
+
+      @include desktop {
+        width: 9.375rem;
+      }
+    }
+
+    &--actions {
+      width: 2.875rem;
+
+      @include tablet {
+        @include flex($ai: center, $jc: flex-end);
+        width: 3.5rem;
+      }
+
+      @include desktop {
+        width: 6.875rem;
+      }
+    }
+  }
+}

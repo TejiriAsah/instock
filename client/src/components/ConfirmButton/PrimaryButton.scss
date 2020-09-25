@@ -1,0 +1,29 @@
+@import '../../partials/mixins';
+@import '../../partials/constants';
+
+.primary {
+  @include font(0.8125rem, 1.25rem, 600, $white);
+  width: 8.6875rem;
+  height: 2.25rem;
+  flex-grow: 1;
+  background-color: $instock-indigo;
+  border-radius: 1.25rem;
+  border: none;
+  margin-left: 1rem;
+  text-transform: capitalize;
+
+  @include tablet {
+    @include font(0.875rem, 1.375rem, 600, $white);
+    flex-grow: 0;
+    width: auto;
+    padding: 0.5rem 1.3125rem;
+  }
+
+  &:hover {
+    background-color: $graphite;
+  }
+
+  &--red {
+    background-color: $red;
+  }
+}
